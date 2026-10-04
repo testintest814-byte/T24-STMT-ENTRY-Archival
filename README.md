@@ -1,2 +1,14 @@
 # T24-STMT-ENTRY-Archival
-Multithreaded archival routine for T24 STMT.ENTRY table with data extraction, compression, and cleanup
+
+Oracle-based archive routine for STMT.ENTRY to STMT.ENTRY$ARC using dev-environment parallel processing.
+
+This version targets the rule:
+- BOOKING.DATE < 20260101
+- Oracle database
+- archive to STMT.ENTRY$ARC
+- suitable for development/test use
+
+It includes:
+- a direct parallel INSERT/SELECT pattern
+- an optional DBMS_PARALLEL_EXECUTE method for multi-worker execution
+
